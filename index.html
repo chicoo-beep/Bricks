@@ -4,19 +4,33 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="theme-color" content="#101412">
-    <title>Tankaria Breakout</title>
+    <title>Tankaria Breakout — Tankaria Access Floors</title>
+    <meta name="description" content="Break the bunker line! A fast, mobile-friendly Arkanoid game by Tankaria Access Floors — raised access floor systems.">
+
+    <!-- Link preview (Open Graph / Twitter) -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Tankaria Access Floors">
+    <meta property="og:title" content="Tankaria Breakout">
+    <meta property="og:description" content="Break the bunker line — a quick, addictive arcade game by Tankaria Access Floors. Tap to play.">
+    <meta property="og:url" content="https://chicoo-beep.github.io/TIPL/">
+    <meta property="og:image" content="https://chicoo-beep.github.io/TIPL/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Tankaria Breakout">
+    <meta name="twitter:description" content="Break the bunker line — a quick arcade game by Tankaria Access Floors.">
+    <meta name="twitter:image" content="https://chicoo-beep.github.io/TIPL/og-image.png">
+
     <link rel="manifest" href="manifest.webmanifest">
-    <link rel="icon" href="tankaria-icon.svg" type="image/svg+xml">
+    <link rel="icon" href="assets/favicon-64.png" type="image/png" sizes="64x64">
+    <link rel="apple-touch-icon" href="assets/icon-192.png">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <main class="shell" aria-label="Tankaria Breakout game">
       <header class="topbar">
-        <div class="brand" aria-label="Tankaria">
-          <div class="logo-mark" aria-hidden="true">
-            <span class="turret"></span>
-            <span class="tracks"></span>
-          </div>
+        <div class="brand" aria-label="Tankaria Access Floors">
+          <img class="logo-mark" src="assets/tankaria-mark.png" alt="Tankaria" width="42" height="36">
           <span>Tankaria</span>
         </div>
         <div class="stats" aria-live="polite">
@@ -29,15 +43,13 @@
       <section class="game-wrap">
         <canvas id="game" width="420" height="720" aria-label="Arkanoid style Tankaria game canvas"></canvas>
         <div class="overlay" id="overlay">
-          <div class="hero-logo" aria-hidden="true">
-            <div class="hero-tank">
-              <span></span>
-            </div>
-            <strong>TANKARIA</strong>
+          <div class="hero-logo">
+            <img src="assets/tankaria.png" alt="Tankaria Access Floors" class="hero-logo-img">
           </div>
           <h1>Break the bunker line</h1>
           <p>Drag the command pad, bounce the shell, and clear every armored block.</p>
           <button id="startBtn" type="button">Start Mission</button>
+          <p class="brand-footer">Brought to you by <strong>Tankaria Access Floors</strong></p>
         </div>
       </section>
 

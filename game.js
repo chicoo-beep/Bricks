@@ -12,6 +12,13 @@ const rightBtn = document.getElementById("rightBtn");
 
 const world = { width: 420, height: 720 };
 const keys = { left: false, right: false };
+
+// Tankaria emblem for the faint in-game watermark (falls back to text until loaded).
+const brandMark = new Image();
+let brandMarkReady = false;
+brandMark.onload = () => { brandMarkReady = true; };
+brandMark.src = "assets/tankaria-mark.png";
+
 const powers = {
   missile: { label: "Missile", color: "#f0c94c", duration: 9500 },
   electric: { label: "Electric", color: "#6fc2b0", duration: 8000 },
@@ -561,11 +568,18 @@ function drawBackground() {
 
 function drawTankariaWatermark() {
   ctx.save();
-  ctx.globalAlpha = 0.12;
-  ctx.fillStyle = "#f0c94c";
-  ctx.font = "900 44px system-ui, sans-serif";
-  ctx.textAlign = "center";
-  ctx.fillText("TANKARIA", world.width / 2, 372);
+  if (brandMarkReady) {
+    const w = world.width * 0.62;
+    const h = w * (brandMark.height / brandMark.width);
+    ctx.globalAlpha = 0.08;
+    ctx.drawImage(brandMark, (world.width - w) / 2, 300 - h / 2, w, h);
+  } else {
+    ctx.globalAlpha = 0.12;
+    ctx.fillStyle = "#f0c94c";
+    ctx.font = "900 44px system-ui, sans-serif";
+    ctx.textAlign = "center";
+    ctx.fillText("TANKARIA", world.width / 2, 372);
+  }
   ctx.restore();
 }
 

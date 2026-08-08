@@ -72,47 +72,10 @@ button {
 }
 
 .logo-mark {
-  align-items: center;
-  background: #26382f;
-  border: 1px solid rgba(240, 201, 76, 0.5);
-  border-radius: 8px;
-  display: grid;
   height: 36px;
-  justify-items: center;
-  position: relative;
-  width: 42px;
-}
-
-.logo-mark::before {
-  background: var(--accent);
-  border-radius: 3px 3px 2px 2px;
-  content: "";
-  height: 13px;
-  position: absolute;
-  top: 10px;
-  width: 23px;
-}
-
-.turret {
-  background: var(--accent);
-  border-radius: 999px;
-  height: 5px;
-  position: absolute;
-  right: 5px;
-  top: 8px;
-  transform: rotate(-13deg);
-  transform-origin: left center;
-  width: 20px;
-}
-
-.tracks {
-  background: repeating-linear-gradient(90deg, #0f1411 0 5px, #38483e 5px 9px);
-  border: 1px solid rgba(244, 240, 230, 0.18);
-  border-radius: 999px;
-  bottom: 7px;
-  height: 8px;
-  position: absolute;
-  width: 31px;
+  width: auto;
+  display: block;
+  object-fit: contain;
 }
 
 .stats {
@@ -173,61 +136,27 @@ canvas {
 .hero-logo {
   align-items: center;
   display: grid;
-  gap: 8px;
   justify-items: center;
   margin-bottom: 18px;
 }
 
-.hero-logo strong {
+.hero-logo-img {
+  width: clamp(150px, 42vw, 230px);
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 6px 20px rgba(0, 0, 0, 0.45));
+}
+
+.brand-footer {
+  color: var(--muted);
+  font-size: 0.8rem;
+  letter-spacing: 0.02em;
+  margin: 16px 0 0;
+  opacity: 0.85;
+}
+
+.brand-footer strong {
   color: var(--accent);
-  font-size: clamp(1.7rem, 8vw, 3rem);
-  letter-spacing: 0;
-  line-height: 1;
-}
-
-.hero-tank {
-  align-items: end;
-  background: #27372f;
-  border: 2px solid rgba(240, 201, 76, 0.7);
-  border-radius: 8px;
-  display: flex;
-  height: 72px;
-  justify-content: center;
-  position: relative;
-  width: 94px;
-}
-
-.hero-tank::before {
-  background: var(--accent);
-  border-radius: 7px 7px 3px 3px;
-  content: "";
-  height: 28px;
-  position: absolute;
-  top: 18px;
-  width: 52px;
-}
-
-.hero-tank::after {
-  background: var(--accent);
-  border-radius: 999px;
-  content: "";
-  height: 8px;
-  position: absolute;
-  right: 7px;
-  top: 15px;
-  transform: rotate(-12deg);
-  transform-origin: left center;
-  width: 45px;
-}
-
-.hero-tank span {
-  background: repeating-linear-gradient(90deg, #0e1511 0 7px, #4f6256 7px 13px);
-  border: 1px solid rgba(244, 240, 230, 0.24);
-  border-radius: 999px;
-  height: 16px;
-  margin-bottom: 13px;
-  width: 70px;
-  z-index: 1;
 }
 
 h1 {
